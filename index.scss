@@ -1,0 +1,102 @@
+
+body{
+    
+    background: linear-gradient(90deg, rgb(245, 245, 245), rgb(197, 207, 217));
+    background-image: url(https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+    font-family: sans-serif;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 40px;
+    margin: 40px;
+    
+}
+
+
+/*remember to Style links so that they are easily readable.
+Style the "hover" and "visited" state of the links.*/
+.post{
+    margin: 20px 0;
+    &__head{
+        background-color: yellow;
+        padding: 20px;
+        &--title{
+            margin: 0 30%;
+        }
+    }
+    &__bquote{
+        font-size: 160%;
+        border-left: 3px solid firebrick;
+        background-color: lightgrey;
+        max-width: 50%;
+        margin: 80px 25%;
+        padding: 30px;
+        font-style: italic;
+
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__lists{
+        li:nth-child(n){
+            margin: 20px;
+            width: 45%;
+        }
+        &--tumbsUp{
+            background-image: url(./assets/bien.png);
+            padding: 25px;
+            margin-left: 5px;
+            background-repeat: no-repeat;
+        }
+        &--tumbsDown{
+            align-content: baseline;
+            background-image: url(./assets/mal.png);
+            padding: 25px;
+            margin-left: 5px;
+            background-repeat: no-repeat;
+        }
+        &--cat{
+            background-image: url(./assets/chat.png);
+            padding: 25px;
+            margin-left: 5px;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.story{
+    padding: 10px;
+    &__quote{
+        font-style: italic;
+    }
+    &__villagersLastQuote{
+        color: yellow;
+    }
+    &__farmerLastQuote{
+        color: blue;
+    }
+}
+
+.good{
+    text-transform: capitalize;
+    color: green;
+}
+.bad{
+    text-transform: capitalize;
+    color: red;
+}
+.dialog{
+    border-collapse: collapse;
+    width: 30%;
+    &__tr, th{
+        background-color: goldenrod;
+    }
+    &__th,td{
+        border: 2px solid black;
+        padding: 10px;
+    }
+    &__tr, td:hover {background-color: #ddd;}
+}
