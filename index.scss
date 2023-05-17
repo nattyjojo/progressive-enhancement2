@@ -1,5 +1,19 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none; 
+}
+
+
 body{
+
+      
     
     background: linear-gradient(90deg, rgb(245, 245, 245), rgb(197, 207, 217));
     background-image: url(https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
@@ -13,6 +27,15 @@ body{
     margin: 40px;
     
 }
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    color: green;
+    &a:visited{
+        color: blue;
+    }
+}
 
 
 /*remember to Style links so that they are easily readable.
@@ -22,8 +45,10 @@ Style the "hover" and "visited" state of the links.*/
     &__head{
         background-color: yellow;
         padding: 20px;
+        font-weight: bolder;
+        font-size: larger;
         &--title{
-            margin: 0 30%;
+            text-align: center;
         }
     }
     &__bquote{
@@ -37,13 +62,28 @@ Style the "hover" and "visited" state of the links.*/
 
     }
     &__content{
+        margin: 80px;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+    &__content2{
+        margin: 30px 0;
         display: flex;
         justify-content: space-between;
+        flex-direction: row-reverse;
+
+    }
+    &__article{
+        width: 50%;
+    }
+    &__post__img2{
+        width: 40%;
     }
     &__lists{
-        li:nth-child(n){
+        padding-top: 60px;
+        li:nth-child(even){
             margin: 20px;
-            width: 45%;
         }
         &--tumbsUp{
             background-image: url(./assets/bien.png);
@@ -64,6 +104,9 @@ Style the "hover" and "visited" state of the links.*/
             margin-left: 5px;
             background-repeat: no-repeat;
         }
+    }
+    &__img{
+        width: 650px;
     }
 }
 
@@ -99,4 +142,26 @@ Style the "hover" and "visited" state of the links.*/
         padding: 10px;
     }
     &__tr, td:hover {background-color: #ddd;}
+}
+.scrollUP{
+    background-color: black;
+    color: #ddd;
+    padding: 30px;
+    list-style: none;
+    border-radius: 20px;
+    border: 2px solid firebrick;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.scrollUP:hover{
+    background-color: green;
+}
+
+footer{
+    background-color: gray;
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+    margin: 0;
 }

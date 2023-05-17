@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Open Sans, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
 body {
   background: linear-gradient(90deg, rgb(245, 245, 245), rgb(197, 207, 217));
   background-image: url(https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
@@ -11,6 +22,17 @@ body {
   margin: 40px;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+}
+a:hovera:visited {
+  color: blue;
+}
+
 /*remember to Style links so that they are easily readable.
 Style the "hover" and "visited" state of the links.*/
 .post {
@@ -19,9 +41,11 @@ Style the "hover" and "visited" state of the links.*/
 .post__head {
   background-color: yellow;
   padding: 20px;
+  font-weight: bolder;
+  font-size: larger;
 }
 .post__head--title {
-  margin: 0 30%;
+  text-align: center;
 }
 .post__bquote {
   font-size: 160%;
@@ -33,12 +57,28 @@ Style the "hover" and "visited" state of the links.*/
   font-style: italic;
 }
 .post__content {
+  margin: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.post__content2 {
+  margin: 30px 0;
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
 }
-.post__lists li:nth-child(n) {
+.post__article {
+  width: 50%;
+}
+.post__post__img2 {
+  width: 40%;
+}
+.post__lists {
+  padding-top: 60px;
+}
+.post__lists li:nth-child(even) {
   margin: 20px;
-  width: 45%;
 }
 .post__lists--tumbsUp {
   background-image: url(./assets/bien.png);
@@ -58,6 +98,9 @@ Style the "hover" and "visited" state of the links.*/
   padding: 25px;
   margin-left: 5px;
   background-repeat: no-repeat;
+}
+.post__img {
+  width: 650px;
 }
 
 .story {
@@ -96,4 +139,28 @@ Style the "hover" and "visited" state of the links.*/
 }
 .dialog__tr, .dialog td:hover {
   background-color: #ddd;
+}
+
+.scrollUP {
+  background-color: black;
+  color: #ddd;
+  padding: 30px;
+  list-style: none;
+  border-radius: 20px;
+  border: 2px solid firebrick;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.scrollUP:hover {
+  background-color: green;
+}
+
+footer {
+  background-color: gray;
+  color: black;
+  padding: 30px 0;
+  text-align: center;
+  margin: 0;
 }/*# sourceMappingURL=index.css.map */
